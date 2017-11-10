@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/Downloads/weddingWithNewFormScreen-master/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/addnotes/presenter/AddNotesPresenter.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/addnotes/presenter/AddNotesPresenterImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/addnotes/view/About_us.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/addnotes/view/AddNotesView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/common/ApplicationContext.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/common/CommonUtilities.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/dropbox/DropBoxActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/editnotes/view/EditNotesView.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/addnote/vnps/addnotes/shopping/ShoppingNote.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/background_color_change.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/layout/intermediate_view.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/MyApplication/app/src/main/java/com/example/pkapo8/myapplication/FragmentOne.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/MyApplication/app/src/main/java/com/example/pkapo8/myapplication/MainActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/app/src/main/java/com/mcdonalds/app/application/McDMarketApplication.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/android-mcd-nutrition/src/test/java/com/mcdonalds/nutrition/NutritionHelperAndroidTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/android-mcd-payments/mcdpayments/src/main/java/com/mcdonalds/payments/PaymentHelper.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/android-mcd-payments/mcdpayments/src/test/java/com/mcdonalds/payments/PaymentHelperTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/android-mcd-payments/mcdpayments/src/test/resources/payment_methods.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/libraries/android-gma-sdk-sapient/mcdonalds-sdk/src/main/java/com/mcdonalds/sdk/modules/customer/CustomerProfile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/account/activity/SocialRegLoginHelperActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/account/fragment/FeedBackFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/account/fragment/TermsAndConditionsFragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/common/activity/BaseActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/common/activity/McDBaseActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/common/activity/SplashActivity.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/common/util/AppCoreUtils.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/main/java/com/mcdonalds/mcdcoreapp/order/util/FoundationalOrderManager.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="D:/z/libraries/android-mcd-core-app/mcdcoreapp/src/test/java/com/mcdonalds/mcdcoreapp/account/util/AccountHelperTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
