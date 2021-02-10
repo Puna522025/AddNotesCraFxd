@@ -17,12 +17,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.transition.AutoTransition;
 import android.util.Log;
@@ -48,11 +42,19 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.crashlytics.android.Crashlytics;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.RemoteInput;
+import androidx.core.content.ContextCompat;
+import androidx.viewpager.widget.ViewPager;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -81,9 +83,10 @@ import addnote.vnps.addnotes.intoduction.fragments.ScreenTwo;
 import addnote.vnps.addnotes.pojo.NoteDetails;
 import addnote.vnps.addnotes.pojo.ShoppingPojo;
 import addnote.vnps.addnotes.shopping.ShoppingNote;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import io.fabric.sdk.android.Fabric;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import static android.util.Log.d;
 
@@ -99,31 +102,29 @@ public class AddNotesView extends AppCompatActivity implements View.OnClickListe
 
     public static final String MYTHEMECOLOR = "myThemeColor";
     private static final String TAG = "AddNotesView";
-    @Bind(R.id.fab_action)
+    @BindView(R.id.fab_action)
     FloatingActionButton fabAction;
-    @Bind(R.id.fab_add)
+    @BindView(R.id.fab_add)
     FloatingActionButton fabAdd;
-    @Bind(R.id.fab_delete)
+    @BindView(R.id.fab_delete)
     FloatingActionButton fabDelete;
-    @Bind(R.id.fab_share)
+    @BindView(R.id.fab_share)
     FloatingActionButton fab_share;
-    @Bind(R.id.notes_container)
+    @BindView(R.id.notes_container)
     GridLayout notes_container;
-    @Bind(R.id.imageBackground)
+    @BindView(R.id.imageBackground)
     ImageView imageBackground;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.rlBackgroundNote)
+    @BindView(R.id.rlBackgroundNote)
     RelativeLayout rlBackgroundNote;
-
-    @Bind(R.id.firstTimeExperience)
+    @BindView(R.id.firstTimeExperience)
     RelativeLayout firstTimeExperience;
-
-
-    @Bind(R.id.viewpager)
+    @BindView(R.id.viewpager)
     ViewPager viewPager;
-    @Bind(R.id.viewPagerCountDots)
+    @BindView(R.id.viewPagerCountDots)
     LinearLayout linearLayout;
+
     ImageButton btnTTSStop1, btnTTS1;
     private TextToSpeech tts;
     private DatabaseHandler database;
@@ -142,10 +143,12 @@ public class AddNotesView extends AppCompatActivity implements View.OnClickListe
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         getWindow().setExitTransition(new AutoTransition());
         super.onCreate(savedInstanceState);
-        Fabric.with(this, new Crashlytics());
+        //Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_viewnotes);
         ApplicationContext.setContext(getApplicationContext());
+
         ButterKnife.bind(this);
+
         setSupportActionBar(toolbar);
         AnalyticsApplication application = (AnalyticsApplication) getApplication();
         mTracker = application.getDefaultTracker();
@@ -181,7 +184,7 @@ public class AddNotesView extends AppCompatActivity implements View.OnClickListe
 
         Intent intent = getIntent();
 
-        Bundle remoteInput = android.support.v4.app.RemoteInput.getResultsFromIntent(intent);
+        Bundle remoteInput = RemoteInput.getResultsFromIntent(intent);
 
         if (remoteInput != null) {
             String s = (String) remoteInput.getCharSequence("KEY");
@@ -324,7 +327,15 @@ public class AddNotesView extends AppCompatActivity implements View.OnClickListe
         AdView adView = (AdView) this.findViewById(R.id.adView);
         // Request for Ads
         AdRequest adRequest = new AdRequest.Builder().build();
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
         adView.loadAd(adRequest);
+
     }
 
     private void settingDimensionsOnIntermediateDialog(Dialog dialog) {
@@ -961,18 +972,18 @@ public class AddNotesView extends AppCompatActivity implements View.OnClickListe
         dialogTheme.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialogTheme.setContentView(R.layout.background_color_change);
 
-        android.support.v7.widget.CardView rlRedYellow = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlRedYellow);
-        android.support.v7.widget.CardView rlOrangRed = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlOrangRed);
-        android.support.v7.widget.CardView rlPurpleGreen = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlPurpleGreen);
-        android.support.v7.widget.CardView rlPinkYellow = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlPinkYellow);
-        android.support.v7.widget.CardView rlGreenBrown = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlGreenBrown);
-        android.support.v7.widget.CardView rlblue = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlblue);
-        android.support.v7.widget.CardView rlOrange = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlOrange);
-        android.support.v7.widget.CardView rlHelloKitty = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlPink_helloKitty);
-        android.support.v7.widget.CardView rlDeepPurple = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlDeepPurple);
-        android.support.v7.widget.CardView rlBlackRed = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlBlackRed);
-        android.support.v7.widget.CardView rlNeonBlue = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlNeonBlue);
-        android.support.v7.widget.CardView rlWhiteJoker = (android.support.v7.widget.CardView) dialogTheme.findViewById(R.id.rlWhiteJoker);
+        CardView rlRedYellow = (CardView) dialogTheme.findViewById(R.id.rlRedYellow);
+        CardView rlOrangRed = (CardView) dialogTheme.findViewById(R.id.rlOrangRed);
+        CardView rlPurpleGreen = (CardView) dialogTheme.findViewById(R.id.rlPurpleGreen);
+        CardView rlPinkYellow = (CardView) dialogTheme.findViewById(R.id.rlPinkYellow);
+        CardView rlGreenBrown = (CardView) dialogTheme.findViewById(R.id.rlGreenBrown);
+        CardView rlblue = (CardView) dialogTheme.findViewById(R.id.rlblue);
+        CardView rlOrange = (CardView) dialogTheme.findViewById(R.id.rlOrange);
+        CardView rlHelloKitty = (CardView) dialogTheme.findViewById(R.id.rlPink_helloKitty);
+        CardView rlDeepPurple = (CardView) dialogTheme.findViewById(R.id.rlDeepPurple);
+        CardView rlBlackRed = (CardView) dialogTheme.findViewById(R.id.rlBlackRed);
+        CardView rlNeonBlue = (CardView) dialogTheme.findViewById(R.id.rlNeonBlue);
+        CardView rlWhiteJoker = (CardView) dialogTheme.findViewById(R.id.rlWhiteJoker);
 
         Context context = ApplicationContext.getApplicationContext();
         ImageView imgDeadpool = (ImageView) dialogTheme.findViewById(R.id.imgDeadpool);

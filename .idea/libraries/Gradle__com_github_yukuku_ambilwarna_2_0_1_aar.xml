@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.yukuku:ambilwarna:2.0.1@aar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/a7110391f193f8176f8360d96805fc5f/jetified-ambilwarna-2.0.1/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/a7110391f193f8176f8360d96805fc5f/jetified-ambilwarna-2.0.1/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.yukuku/ambilwarna/2.0.1/d3cbd0f9c7d3b249246c049829f39a3c703521ac/ambilwarna-2.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.yukuku/ambilwarna/2.0.1/83d7f0b798f6cdf00c65e408a097dbd3c22bdd8e/ambilwarna-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

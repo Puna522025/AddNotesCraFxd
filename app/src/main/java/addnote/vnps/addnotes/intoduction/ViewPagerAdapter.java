@@ -1,15 +1,11 @@
 package addnote.vnps.addnotes.intoduction;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
-import android.support.v4.view.ViewPager;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.List;
-
-import addnote.vnps.addnotes.intoduction.fragments.ScreenOne;
-import addnote.vnps.addnotes.intoduction.fragments.ScreenThree;
-import addnote.vnps.addnotes.intoduction.fragments.ScreenTwo;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter implements ViewPager.OnPageChangeListener {
     int currentPage = 0;
@@ -33,7 +29,7 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter implements ViewP
             }*/
 
             return (Fragment) fragmentsAttached.get(position).newInstance();
-       } catch (InstantiationException e) {
+        } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();

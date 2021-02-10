@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0E0E0"
-    android:alpha="0.7">
+    android:alpha="0.7"
+    android:background="#E0E0E0">
 
     <ImageView
         android:layout_width="205dp"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_above="@+id/cardView1"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:src="@drawable/introtext" />
 
@@ -28,7 +28,7 @@
         android:layout_toLeftOf="@+id/dummyView">
 
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/card1"
             style="@style/CardViewStyle"
             android:layout_width="115dp"
@@ -50,27 +50,27 @@
                     android:layout_width="72dp"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="3dp"
                     android:layout_marginTop="24dp"
+                    android:layout_marginRight="3dp"
                     android:text="Add your notes instantly .."
                     android:textColor="@android:color/black"
                     android:textSize="15sp" />
 
             </FrameLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 
 
     <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toRightOf="@+id/dummyView"
-        android:id="@+id/relativeLayout">
+        android:layout_toRightOf="@+id/dummyView">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:id="@+id/card2"
             style="@style/CardViewStyle"
             android:layout_width="115dp"
@@ -100,7 +100,7 @@
 
             </FrameLayout>
 
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
     </RelativeLayout>
 
 
@@ -129,14 +129,14 @@
         android:id="@+id/skipButton"
         android:layout_width="120dp"
         android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:background="@drawable/button_intro"
         android:text="Skip"
         android:textAllCaps="false"
         android:textColor="#454545"
-        android:textStyle="bold"
         android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:textStyle="bold" />
 
     <!--<TextView
         android:layout_width="wrap_content"
@@ -150,53 +150,53 @@
         android:layout_marginBottom="10dp"
         android:layout_marginRight="65dp"/>-->
 
-<ImageView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:id="@+id/tvAdd"
-    android:src="@drawable/addd"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentBottom="true"
-    android:layout_marginBottom="10dp"
-    android:layout_marginRight="65dp"/>
-
     <ImageView
+        android:id="@+id/tvAdd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/addd" />
+
+    <ImageView
         android:id="@+id/tvDel"
-        android:src="@drawable/del"
-        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_above="@+id/tvAdd"
-        android:layout_marginBottom="35dp"
-        android:layout_marginRight="65dp" />
-
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:layout_above="@+id/tvDel"
-        android:src="@drawable/share"
+        android:layout_marginRight="65dp"
         android:layout_marginBottom="35dp"
-        android:layout_marginRight="65dp"/>
+        android:src="@drawable/del" />
+
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/dropboxtext"
-        android:layout_marginTop="65dp"
-        android:layout_marginRight="20dp"
+        android:layout_above="@+id/tvDel"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="35dp"
+        android:src="@drawable/share" />
+
+    <ImageView
+        android:id="@+id/dropboxtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:id="@+id/dropboxtext" />
+        android:layout_marginTop="65dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/dropboxtext" />
 
     <ImageView
+        android:id="@+id/themesText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/theme"
-        android:layout_marginRight="3dp"
-        android:id="@+id/themesText"
         android:layout_marginTop="70dp"
-        android:layout_toStartOf="@+id/tvAdd" />
+        android:layout_marginRight="3dp"
+        android:layout_toStartOf="@+id/tvAdd"
+        android:src="@drawable/theme" />
 
 </RelativeLayout>

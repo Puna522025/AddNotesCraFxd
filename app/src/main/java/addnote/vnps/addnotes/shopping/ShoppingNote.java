@@ -10,16 +10,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,8 +23,17 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -56,7 +56,7 @@ import addnote.vnps.addnotes.database.DatabaseHandler;
 import addnote.vnps.addnotes.editnotes.view.BroadcastManager;
 import addnote.vnps.addnotes.pojo.NoteDetails;
 import addnote.vnps.addnotes.pojo.ShoppingPojo;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 import static android.util.Log.d;
@@ -68,27 +68,27 @@ public class ShoppingNote extends AppCompatActivity implements View.OnClickListe
 
     private static final String TAG = "ShoppingNotesView";
 
-    @Bind(R.id.etNoteText)
+    @BindView(R.id.etNoteText)
     EditText etNoteText;
 
-    @Bind(R.id.titleShopping)
+    @BindView(R.id.titleShopping)
     EditText titleShopping;
 
-    @Bind(R.id.totalSumItem)
+    @BindView(R.id.totalSumItem)
     TextView totalSumItem;
 
-    @Bind(R.id.listView)
+    @BindView(R.id.listView)
     RecyclerView listView;
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(R.id.alertText)
+    @BindView(R.id.alertText)
     TextView alertText;
 
-    @Bind(R.id.fab_save)
+    @BindView(R.id.fab_save)
     FloatingActionButton fab_save;
-    @Bind(R.id.shopping_note_coordinator_layout)
+    @BindView(R.id.shopping_note_coordinator_layout)
     CoordinatorLayout shopping_note_coordinator_layout;
     private String notesType = "";
     private ShoppingListAdapter recyclerAdapter;

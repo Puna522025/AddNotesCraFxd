@@ -5,11 +5,6 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
@@ -21,13 +16,18 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
 import com.dropbox.core.android.Auth;
-import com.dropbox.core.v2.DbxClientV2;
 import com.dropbox.core.v2.users.FullAccount;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
 import addnote.vnps.addnotes.R;
@@ -38,7 +38,7 @@ import addnote.vnps.addnotes.common.CommonUtilities;
 import addnote.vnps.addnotes.database.DatabaseHandler;
 import addnote.vnps.addnotes.dropbox.newdropbox.DropboxClient;
 import addnote.vnps.addnotes.dropbox.newdropbox.UserAccountTask;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class DropBoxActivity extends AppCompatActivity implements OnClickListener {
@@ -50,21 +50,21 @@ public class DropBoxActivity extends AppCompatActivity implements OnClickListene
     private static String ACCESS_TOKEN = "";
     // private final static AccessType ACCESS_TYPE = AccessType.DROPBOX;
     DatabaseHandler database;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.loginBtn)
+    @BindView(R.id.loginBtn)
     Button loginBtn;
-    @Bind(R.id.uploadFileBtn)
+    @BindView(R.id.uploadFileBtn)
     Button uploadFileBtn;
-    @Bind(R.id.listFilesBtn)
+    @BindView(R.id.listFilesBtn)
     Button listFilesBtn;
-    @Bind(R.id.fab_save)
+    @BindView(R.id.fab_save)
     FloatingActionButton fab_save;
-    @Bind(R.id.dropbox_relative)
+    @BindView(R.id.dropbox_relative)
     RelativeLayout dropbox_relative;
-    @Bind(R.id.tvWelcome)
+    @BindView(R.id.tvWelcome)
     TextView tvWelcome;
-    @Bind(R.id.ivUser)
+    @BindView(R.id.ivUser)
     ImageView ivUser;
 
     //private DbxClientV2 dropboxApi;

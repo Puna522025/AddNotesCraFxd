@@ -1,19 +1,17 @@
 package addnote.vnps.addnotes.adapter;
 
 import android.content.Context;
-import android.graphics.Typeface;
-import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -102,7 +100,7 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
         public TextView itemToBuy;
         public TextView count;
         public TextView totalValue;
-        public android.support.v7.widget.SwitchCompat isDone;
+        public SwitchCompat isDone;
         public ImageView crossLine;
         public ImageView imgDeleteNote;
         public RelativeLayout rlExtraShoppingParams;
@@ -115,7 +113,7 @@ public class ShoppingListAdapter extends RecyclerView.Adapter<ShoppingListAdapte
             this.count = (TextView) view.findViewById(R.id.count);
             this.totalValue = (TextView) view.findViewById(R.id.totalValueofItems);
             this.rlExtraShoppingParams = (RelativeLayout) view.findViewById(R.id.rlExtraShoppingParams);
-            this.isDone = (android.support.v7.widget.SwitchCompat) view.findViewById(R.id.isDone);
+            this.isDone = (SwitchCompat) view.findViewById(R.id.isDone);
             this.isDone.setTag(getAdapterPosition());
             this.crossLine = (ImageView) view.findViewById(R.id.crossLine);
             this.imgDeleteNote = (ImageView) view.findViewById(R.id.imgDeleteNote);

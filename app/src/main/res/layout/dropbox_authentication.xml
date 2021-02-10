@@ -97,7 +97,7 @@
                 android:textColor="@color/divider"
                 android:text="** We recommend to first download all the notes and then upload them."/>
 
-            <android.support.design.widget.FloatingActionButton
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
                 android:id="@+id/fab_save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -116,6 +116,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         ads:adSize="BANNER"
-        ads:adUnitId="ca-app-pub-6529573734445559/2392441828">
+        ads:adUnitId="ca-app-pub-6529573734445559/8847855027">
     </com.google.android.gms.ads.AdView>
 </RelativeLayout>

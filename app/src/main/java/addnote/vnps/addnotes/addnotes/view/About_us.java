@@ -1,23 +1,23 @@
 package addnote.vnps.addnotes.addnotes.view;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Window;
-import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import addnote.vnps.addnotes.BuildConfig;
 import addnote.vnps.addnotes.R;
 import addnote.vnps.addnotes.common.ApplicationContext;
 import addnote.vnps.addnotes.common.CommonUtilities;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -25,13 +25,13 @@ import butterknife.ButterKnife;
  */
 public class About_us extends AppCompatActivity {
 
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
 
-    @Bind(R.id.version)
+    @BindView(R.id.version)
     TextView version;
 
-    @Bind(R.id.fab_save)
+    @BindView(R.id.fab_save)
     FloatingActionButton fab_save;
 
     @Override
@@ -41,7 +41,7 @@ public class About_us extends AppCompatActivity {
         ApplicationContext.setContext(getApplicationContext());
         ButterKnife.bind(this);
         setSupportActionBar(toolbar);
-        version.setText(getString(R.string.version_number)+ " " + BuildConfig.VERSION_NAME);
+        version.setText(getString(R.string.version_number) + " " + BuildConfig.VERSION_NAME);
         setTheme();
     }
 

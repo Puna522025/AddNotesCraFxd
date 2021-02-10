@@ -1,12 +1,8 @@
 package addnote.vnps.addnotes.intoduction.fragments;
 
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,12 +10,12 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
+
 import addnote.vnps.addnotes.R;
 import addnote.vnps.addnotes.addnotes.presenter.SkipClicked;
-import addnote.vnps.addnotes.addnotes.view.AddNotesView;
-import addnote.vnps.addnotes.common.CommonUtilities;
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by pkapo8 on 9/15/2016.
@@ -28,7 +24,7 @@ public class ScreenTwo extends Fragment implements View.OnClickListener {
 
     TextView tvNotesViewIntro,tvNotesViewIntro2;
     Button skipButton;
-    android.support.v7.widget.CardView card2,card1;
+    CardView card2,card1;
     FrameLayout notes_frame1,notes_frame2;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -47,8 +43,8 @@ public class ScreenTwo extends Fragment implements View.OnClickListener {
         tvNotesViewIntro = (TextView) view.findViewById(R.id.tvNotesViewIntro);
         tvNotesViewIntro2 = (TextView) view.findViewById(R.id.tvNotesViewIntro2);
 
-        card2 = (android.support.v7.widget.CardView) view.findViewById(R.id.card2);
-        card1 = (android.support.v7.widget.CardView) view.findViewById(R.id.card1);
+        card2 = (CardView) view.findViewById(R.id.card2);
+        card1 = (CardView) view.findViewById(R.id.card1);
 
         notes_frame1 = (FrameLayout) view.findViewById(R.id.notes_frame1);
         notes_frame2 = (FrameLayout) view.findViewById(R.id.notes_frame2);

@@ -20,15 +20,7 @@ import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+
 import android.text.TextUtils;
 import android.transition.AutoTransition;
 import android.util.Log;
@@ -51,10 +43,20 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.IOException;
 import java.security.NoSuchAlgorithmException;
@@ -77,7 +79,7 @@ import addnote.vnps.addnotes.editnotes.presenter.EditNotesPresenter;
 import addnote.vnps.addnotes.editnotes.presenter.EditNotesPresenterImpl;
 import addnote.vnps.addnotes.pojo.NoteDetails;
 import addnote.vnps.addnotes.widget.WidgetUI;
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import yuku.ambilwarna.AmbilWarnaDialog;
 
@@ -93,23 +95,23 @@ public class EditNotesView extends AppCompatActivity implements View.OnClickList
     String colorDefault = "#EDEDED";
     String colorTextDefault = "#3C5899";
     int color = 0xffffff00;
-    @Bind(R.id.etNoteText)
+    @BindView(R.id.etNoteText)
     EditText etNoteText;
-    @Bind(R.id.add_note_coordinator_layout)
+    @BindView(R.id.add_note_coordinator_layout)
     CoordinatorLayout add_note_coordinator_layout;
-    @Bind(R.id.rlNote)
+    @BindView(R.id.rlNote)
     RelativeLayout rlNote;
-    @Bind(R.id.fab_save)
+    @BindView(R.id.fab_save)
     FloatingActionButton fab_save;
-    @Bind(R.id.alertText)
+    @BindView(R.id.alertText)
     TextView alertText;
-    @Bind(R.id.toolbar)
+    @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @Bind(R.id.btnSpeak)
+    @BindView(R.id.btnSpeak)
     ImageButton btnSpeak;
-    @Bind(R.id.btnTTSstart)
+    @BindView(R.id.btnTTSstart)
     ImageButton btnTTSStart;
-    @Bind(R.id.btnTTSPause)
+    @BindView(R.id.btnTTSPause)
     ImageButton btnTTSPause;
 
     String titleLocked = "";

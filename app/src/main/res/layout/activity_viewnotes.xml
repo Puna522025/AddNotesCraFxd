@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,8 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/white"
-    android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    android:fitsSystemWindows="true">
 
     <include
         android:id="@+id/toolbar"
@@ -16,9 +15,7 @@
 
     </include>
 
-
     <include layout="@layout/content_main" />
-
 
     <RelativeLayout
         android:id="@+id/firstTimeExperience_layout"
@@ -119,7 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -132,7 +129,7 @@
             app:elevation="6dp"
             app:pressedTranslationZ="12dp" />
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_delete"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -145,7 +142,7 @@
             app:elevation="6dp"
             app:pressedTranslationZ="12dp" />
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -158,7 +155,7 @@
             app:elevation="6dp"
             app:pressedTranslationZ="12dp" />
 
-        <android.support.design.widget.FloatingActionButton
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,7 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|start"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-6529573734445559/2392441828"/>
+            ads:adUnitId="ca-app-pub-6529573734445559/5859225023"/>
 
 
         <RelativeLayout
@@ -183,7 +180,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v4.view.ViewPager
+            <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewpager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -212,4 +209,4 @@
         </RelativeLayout>
     </FrameLayout>
 
-</android.support.design.widget.CoordinatorLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

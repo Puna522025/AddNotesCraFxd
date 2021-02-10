@@ -8,9 +8,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.widget.RemoteViews;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import addnote.vnps.addnotes.R;
 import addnote.vnps.addnotes.database.DatabaseHandler;

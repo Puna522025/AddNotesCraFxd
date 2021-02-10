@@ -1,0 +1,60 @@
+ext {
+    androidMinSdkVersion = 24
+    androidTargetSdkVersion = 30
+    androidBuildToolsVersion = '29.0.3'
+    androidPluginVersion = '4.0.0'
+
+    // Testing
+    mockitoLibraryVersion = '3.2.0'
+    mockkLibraryVersion = '1.10.0'
+    mockWebServerVersion = '4.8.0'
+    assertJLibraryVersion = '1.7.1'
+    jUnitVersion = '4.12'
+    testRunnerVersion = '1.2.0'
+    expressoVersion = '3.2.0'
+    coreTestingVersion = '1.0.0'
+    junitParamsLibraryVersion = '1.0.6'
+    jUnitExtVersion = '1.1.1'
+
+    //Network
+    retrofitVersion = '2.3.0'
+    okhttpVersion = '4.4.0'
+    okhttpLoggingVersion = '4.4.0'
+
+    //View
+    appCompactVersion = '1.1.0'
+    constraintLayoutVersion = '2.0.0'
+    viewModelVersion = '2.1.0'
+    recyclerViewVersion = '1.1.0'
+    cardview = "1.0.0"
+    materialVersion = "1.0.0"
+
+    rxJavaVersion = '2.2.8'
+    rxAndroidVersion = '2.1.1'
+    daggerVersion = '2.28.3'
+    jacksonLibraryVersion = '2.11.2'
+    lottieLibraryVersion = '3.0.7'
+    androidXFragmentVersion = "1.1.0"
+    androidXAnnotationVersion = "1.1.0"
+    androidXLifecycle = "2.2.0"
+    multiLevelListViewVersion = "1.0.1"
+    lifecycle_version = "2.1.0"
+    androidXNavigationVersion = "2.3.1"
+
+    //Lloyds
+    coreModule = '0.0.13'
+    uiModuleVersion = '0.0.9'
+    analyticsVersion = '1.0.0'
+    netSecVersion = '1.0.0'
+    uiModuleVersion = '0.0.9'
+    uiTestModuleVersion = '0.0.11'
+
+    //Kotlin
+    kotlinVersion = '1.4.21'
+    kotlinCore = "1.2.0"
+
+    leakCanaryVersion = '2.5'
+    daggerVersion = '2.22'
+    daggerAndroidVersion = '2.22'
+    viewModelVersion = '2.1.0'
+}

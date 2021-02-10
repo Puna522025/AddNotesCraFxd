@@ -1,0 +1,49 @@
+apply from: '../build-versions.gradle'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+apply plugin: "androidx.navigation.safeargs"
+
+android {
+    compileSdkVersion androidTargetSdkVersion
+    buildToolsVersion androidBuildToolsVersion
+
+    defaultConfig {
+        applicationId "addnote.vnps.addnotes"
+        multiDexEnabled true
+        minSdkVersion androidMinSdkVersion
+        targetSdkVersion androidTargetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    kapt "com.google.dagger:dagger-compiler:${daggerVersion}"
+
+    testImplementation "junit:junit:${jUnitVersion}"
+    testImplementation "android.arch.core:core-testing:${coreTestingVersion}"
+    testImplementation "org.mockito:mockito-core:${mockitoLibraryVersion}"
+    testImplementation "io.mockk:mockk:${mockkLibraryVersion}"
+    testImplementation "org.assertj:assertj-core:${assertJLibraryVersion}"
+    testImplementation "pl.pragmatists:JUnitParams:${junitParamsLibraryVersion}"
+
+    androidTestImplementation "androidx.test:runner:${testRunnerVersion}"
+    androidTestImplementation "androidx.test.ext:junit:${jUnitExtVersion}"
+
+    annotationProcessor "com.google.dagger:dagger-compiler:${daggerVersion}"
+}

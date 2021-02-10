@@ -1,7 +1,8 @@
 package addnote.vnps.addnotes.common;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
+
+import androidx.annotation.NonNull;
 
 /**
  * Created by pkapo8 on 07-Jun-17.

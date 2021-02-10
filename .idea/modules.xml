@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AD_NO_FAB_SEP-master.iml" filepath="$PROJECT_DIR$/AD_NO_FAB_SEP-master.iml" />
-      <module fileurl="file://D:\AD_NO_FAB_SEP-master\AddNotes.iml" filepath="D:\AD_NO_FAB_SEP-master\AddNotes.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://D:/AD_NO_FAB_SEP-master/AddNotes.iml" filepath="D:/AD_NO_FAB_SEP-master/AddNotes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AddNotesCraFxd.iml" filepath="$PROJECT_DIR$/.idea/modules/AddNotesCraFxd.iml" group="AddNotesCraFxd" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AddNotesCraFxd/app" />
     </modules>
   </component>
 </project>

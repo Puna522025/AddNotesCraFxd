@@ -2,7 +2,6 @@ package addnote.vnps.addnotes.adapter;
 
 import android.content.Context;
 import android.graphics.Typeface;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +9,9 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -79,13 +81,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.Custom
             .OnClickListener {
         public TextView text;
         public ImageView tick;
-        public  android.support.v7.widget.CardView card1;
+        public  CardView card1;
         public CustomViewHolder(View view) {
             super(view);
             view.setOnClickListener(this);
             this.text = (TextView) view.findViewById(R.id.textFont);
             this.tick = (ImageView) view.findViewById(R.id.tick);
-            this.card1 = (android.support.v7.widget.CardView)view.findViewById(R.id.card1);
+            this.card1 = (CardView)view.findViewById(R.id.card1);
         }
         @Override
         public void onClick(View v) {
